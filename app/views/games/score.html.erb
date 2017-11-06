@@ -1,0 +1,11 @@
+<h1>Welcome to Longest Word Challenge</h1>
+<p>Use the letters to creat the longest word you can!</p>
+
+
+<p>Attempt: <%= @attempt %></p>
+
+<p>Time: <%= @result[:time] %></p>
+<p>Score: <%= @result[:score] %></p>
+<p>Message: <%= @result[:message] %></p>
+
+<%= link_to 'try again', user_path %>

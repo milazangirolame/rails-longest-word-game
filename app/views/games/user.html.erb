@@ -1,0 +1,15 @@
+<h1>Welcome to Longest Word Challenge</h1>
+<p>Use the letters to creat the longest word you can!</p>
+
+
+<%= @grid.join(' - ') %>
+
+
+<form action="/score" method='post'>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="word"><h3> Insert Here your Try: </h3></label>
+  <input type="text" name="word">
+  <input type="hidden" name='start_time' value="<%= @start_time %>">
+  <input type="hidden" name="grid" value="<%= @grid.join(',') %>">
+  <input type="submit" value="Ready!">
+</form>
